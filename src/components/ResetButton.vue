@@ -7,11 +7,14 @@ import { Component, Emit, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class ResetButton extends Vue {
-  @Prop()
   public initialValue!: string;
 
   @Prop()
   public value!: string;
+
+  public created() {
+    this.initialValue = this.value;
+  }
 
   @Emit()
   // eslint-disable-next-line @typescript-eslint/no-empty-function
