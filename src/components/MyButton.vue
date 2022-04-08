@@ -1,5 +1,5 @@
 <template>
-  <button @click="onClick">MyButton</button>
+  <v-btn @click="onClick">MyButton</v-btn>
 </template>
 
 <script lang="ts">

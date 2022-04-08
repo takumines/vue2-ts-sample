@@ -9,6 +9,9 @@
     <p>
       <ResetButton v-model="greetText"></ResetButton>
     </p>
+    <p>
+      <v-btn>テスト</v-btn>
+    </p>
   </div>
 </template>
 

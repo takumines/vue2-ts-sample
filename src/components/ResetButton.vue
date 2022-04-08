@@ -1,5 +1,5 @@
 <template>
-  <button @click="onClick">Reset</button>
+  <v-btn @click="onClick">Reset</v-btn>
 </template>
 
 <script lang="ts">
