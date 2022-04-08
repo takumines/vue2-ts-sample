@@ -23,9 +23,5 @@ export default class MyButton extends Vue {
     this.count++;
     this.click(this.count);
   }
-
-  public childMethod() {
-    alert("子コンポーネントのメソッド");
-  }
 }
 </script>

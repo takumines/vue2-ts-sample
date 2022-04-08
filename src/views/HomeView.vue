@@ -4,11 +4,7 @@
     <p>挨拶した回数：{{ count }}回</p>
     <p v-if="isRegulars">いつもありがとうございます</p>
     <p>
-      <MyButton
-        ref="myButton"
-        :greet="greetText"
-        @click="onMyButtonClicked"
-      ></MyButton>
+      <MyButton :greet="greetText" @click="onMyButtonClicked"></MyButton>
     </p>
     <p>
       <ResetButton v-model="greetText"></ResetButton>
@@ -17,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Watch, Ref, Vue } from "vue-property-decorator";
+import { Component, Watch, Vue } from "vue-property-decorator";
 import MyButton from "@/components/MyButton.vue";
 import ResetButton from "@/components/ResetButton.vue";
 
@@ -30,8 +26,6 @@ import ResetButton from "@/components/ResetButton.vue";
 export default class HomeView extends Vue {
   private count = 0;
   public greetText = "Hello";
-
-  @Ref() myButton: MyButton | undefined;
 
   public get isRegulars(): boolean {
     return this.count >= 5;
@@ -47,7 +41,6 @@ export default class HomeView extends Vue {
   public onMyButtonClicked(count: number) {
     this.count = count;
     this.greetText = "こんにちは";
-    this.myButton?.childMethod();
   }
 }
 </script>
