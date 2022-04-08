@@ -18,7 +18,9 @@ export default class ResetButton extends Vue {
 
   @Emit()
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  public input(value: string) {}
+  public input(value: string) {
+    this.value = value;
+  }
 
   public onClick() {
     this.input(this.initialValue);

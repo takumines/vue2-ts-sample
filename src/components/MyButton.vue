@@ -14,7 +14,9 @@ export default class MyButton extends Vue {
 
   @Emit()
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  public click(count: number) {}
+  public click(count: number) {
+    this.count = count;
+  }
 
   public onClick() {
     alert(this.greet);
